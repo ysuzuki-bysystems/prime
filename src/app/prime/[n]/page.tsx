@@ -1,4 +1,5 @@
 export const dynamic = "force-static";
+export const revalidate = 0;
 
 function isPrime(n: bigint): boolean {
   if (n === 1n) {

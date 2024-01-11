@@ -7,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cdk:synth": "cdk synth -a ./cdk-app.js -q",
+    "cdk:diff": "cdk diff -a ./cdk.out",
+    "cdk:deploy": "cdk deploy -a ./cdk.out --require-approval=never"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -15,10 +18,13 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@aws-cdk/aws-apprunner-alpha": "^2.118.0-alpha.0",
     "@tsconfig/strictest": "^2.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "aws-cdk": "^2.118.0",
+    "aws-cdk-lib": "^2.118.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "typescript": "^5"
